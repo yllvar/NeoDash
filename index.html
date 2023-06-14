@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <style>
+      .rectangle {
+        top: 146px;
+        left: 120px;
+        border: 1px solid var(--color-mediumaquamarine);
+        box-sizing: border-box;
+        width: 269px;
+        height: 285px;
+      }
+      .rectangle,
+      .rectangle1,
+      .rectangle2 {
+        position: absolute;
+        border-radius: var(--br-11xs);
+      }
+      .rectangle1 {
+        top: 451px;
+        left: 120px;
+        border: 1px solid var(--color-mediumaquamarine);
+        box-sizing: border-box;
+        width: 653px;
+        height: 313px;
+      }
+      .rectangle2 {
+        top: 146px;
+        left: 408px;
+        background-color: var(--color-mediumaquamarine);
+        width: 200px;
+        height: 99.95px;
+      }
+      .rectangle3 {
+        top: 146px;
+        left: 768px;
+        background-color: var(--color-azure);
+        border: 1px solid var(--color-whitesmoke-200);
+        width: 120px;
+        height: 99.95px;
+      }
+      .rectangle3,
+      .rectangle4,
+      .rectangle5 {
+        position: absolute;
+        border-radius: var(--br-11xs);
+        box-sizing: border-box;
+      }
+      .rectangle4 {
+        top: 146px;
+        left: 628px;
+        background-color: var(--color-azure);
+        border: 1px solid var(--color-whitesmoke-200);
+        width: 120px;
+        height: 99.95px;
+      }
+      .rectangle5 {
+        top: 451px;
+        left: 794px;
+        border: 1px solid var(--color-mediumaquamarine);
+        width: 234px;
+        height: 313px;
+      }
+      .rectangle10,
+      .rectangle6,
+      .rectangle7,
+      .rectangle8,
+      .rectangle9 {
+        position: absolute;
+        top: 36px;
+        border-radius: var(--br-11xs);
+        height: 35px;
+      }
+      .rectangle6 {
+        left: 335px;
+        background-color: var(--color-lightcyan);
+        width: 245px;
+      }
+      .rectangle10,
+      .rectangle7,
+      .rectangle8,
+      .rectangle9 {
+        left: 1328px;
+        border: 1px solid var(--color-mediumaquamarine);
+        box-sizing: border-box;
+        width: 35px;
+      }
+      .rectangle10,
+      .rectangle8,
+      .rectangle9 {
+        left: 992px;
+      }
+      .rectangle10,
+      .rectangle9 {
+        top: 266px;
+        left: 408px;
+        width: 269px;
+        height: 165px;
+      }
+      .rectangle10 {
+        left: 697px;
+        width: 331px;
+      }
+      .amount,
+      .send-to {
+        position: absolute;
+        font-size: var(--font-size-2xs);
+        letter-spacing: 0.41px;
+        text-transform: uppercase;
+        color: var(--color-gray-400);
+      }
+      .send-to {
+        top: 345px;
+        left: 726px;
+        text-align: right;
+      }
+      .amount {
+        top: 300px;
+        left: 871px;
+      }
+      .rectangle11,
+      .rectangle12 {
+        position: absolute;
+        top: 146px;
+        left: 1048px;
+        border-radius: var(--br-11xs);
+        background-color: var(--color-azure);
+        border: 1px solid var(--color-ghostwhite);
+        box-sizing: border-box;
+        width: 313px;
+        height: 477px;
+      }
+      .rectangle12 {
+        top: 643px;
+        height: 120px;
+      }
+      .marke {
+        letter-spacing: 0.3px;
+      }
+      .markets {
+        position: absolute;
+        top: 466px;
+        left: 820px;
+        font-size: var(--font-size-base);
+        color: var(--color-gray-400);
+      }
+      .us {
+        letter-spacing: 0.41px;
+      }
+      .d {
+        letter-spacing: 0.45px;
+      }
+      .usd {
+        left: 921.5px;
+      }
+      .bitcoin-chart,
+      .btc,
+      .eur,
+      .usd {
+        position: absolute;
+        top: 469px;
+        font-size: var(--font-size-2xs);
+      }
+      .eur {
+        left: 952.75px;
+        color: var(--color-darkgray-100);
+      }
+      .bitcoin-chart,
+      .btc {
+        left: 984px;
+      }
+      .bitcoin-chart {
+        top: 473px;
+        left: 152px;
+        font-size: var(--font-size-xl);
+        font-weight: 300;
+        color: #43444b;
+      }
+      .current-balance,
+      .dashboard {
+        position: absolute;
+        letter-spacing: 0.3px;
+      }
+      .dashboard {
+        top: 37px;
+        left: 128px;
+        font-size: var(--font-size-5xl);
+        font-weight: 300;
+        color: var(--color-darkslategray-800);
+      }
+      .current-balance {
+        top: 283px;
+        left: 149.5px;
+        font-weight: 500;
+      }
+      .b {
+        top: 391px;
+        left: 226px;
+        color: #b9b6bb;
+        text-align: left;
+      }
+      .b,
+      .bitcoin,
+      .ethereum,
+      .eur1,
+      .litecoin {
+        position: absolute;
+        letter-spacing: 0.3px;
+      }
+      .eur1 {
+        top: 391px;
+        left: 149px;
+        color: var(--color-gray-500);
+        text-align: left;
+      }
+      .bitcoin,
+      .ethereum,
+      .litecoin {
+        top: 293px;
+        left: 561.5px;
+        font-weight: 500;
+      }
+      .ethereum,
+      .litecoin {
+        top: 342px;
+        left: 560px;
+      }
+      .litecoin {
+        top: 394px;
+        left: 561.5px;
+      }
+      .overvie {
+        letter-spacing: 0.32px;
+      }
+      .w {
+        letter-spacing: 0.35px;
+      }
+      .overview {
+        position: absolute;
+        top: 110px;
+        left: 120px;
+        font-size: var(--font-size-sm);
+        color: var(--color-darkslategray-800);
+      }
+      .wh-dashboard-child {
+        position: absolute;
+        top: 175px;
+        left: 302px;
+        border-radius: var(--br-11xs);
+        background-color: var(--color-lightcyan);
+        width: 65px;
+        height: 76px;
+      }
+      .wallets {
+        top: 224px;
+        left: 313px;
+        font-size: var(--font-size-smi);
+        color: var(--color-gray-400);
+      }
+      .div,
+      .usd1,
+      .wallets {
+        position: absolute;
+      }
+      .div {
+        top: 303px;
+        left: 149px;
+        font-size: 48px;
+        letter-spacing: 0.33px;
+        font-weight: 300;
+        color: var(--color-gray-500);
+        text-align: left;
+      }
+      .usd1 {
+        top: 301px;
+        left: 290px;
+        letter-spacing: 0.26px;
+        color: var(--color-darkslategray-600);
+      }
+      .div1,
+      .div2 {
+        left: 489px;
+        font-size: var(--font-size-5xl);
+        color: var(--color-gray-500);
+        text-align: left;
+      }
+      .div1 {
+        position: absolute;
+        top: 285px;
+        font-weight: 300;
+      }
+      .div2 {
+        top: 334px;
+      }
+      .div2,
+      .div3,
+      .div4 {
+        position: absolute;
+        font-weight: 300;
+      }
+      .div3 {
+        top: 386px;
+        left: 489px;
+        font-size: var(--font-size-5xl);
+        letter-spacing: 0.3px;
+        color: var(--color-gray-500);
+        text-align: left;
+      }
+      .div4 {
+        top: 181px;
+        left: 325px;
+        font-size: var(--font-size-15xl);
+        color: var(--color-gray-400);
+      }
+      .transactions {
+        top: 225px;
+        left: 146px;
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-400);
+      }
+      .dash,
+      .div5,
+      .transactions {
+        position: absolute;
+      }
+      .div5 {
+        top: 180px;
+        left: 149px;
+        font-size: var(--font-size-15xl);
+        font-weight: 300;
+        color: var(--color-gray-500);
+        text-align: left;
+      }
+      .dash {
+        top: 115px;
+        left: 20px;
+        font-size: var(--font-size-smi);
+        display: none;
+        color: #5b5d65;
+      }
+      .nikita-resheteev {
+        position: absolute;
+        top: 44px;
+        left: 1254px;
+        font-size: var(--font-size-sm);
+        color: var(--color-gray-400);
+      }
+      .search,
+      .transactions1 {
+        position: absolute;
+        top: 46px;
+        left: 347px;
+        font-size: var(--font-size-smi);
+        color: var(--color-darkslategray-400);
+      }
+      .transactions1 {
+        top: 167px;
+        left: 1067px;
+        font-size: var(--font-size-base);
+        color: var(--color-darkslategray-800);
+        text-align: left;
+      }
+      .bitcoi {
+        letter-spacing: 0.34px;
+      }
+      .n {
+        letter-spacing: 0.39px;
+      }
+      .bitcoin1,
+      .div6 {
+        position: absolute;
+        top: 214px;
+        left: 424px;
+        font-size: var(--font-size-base);
+        font-weight: 300;
+        color: var(--color-gray-400);
+      }
+      .div6 {
+        top: 206px;
+        left: 516px;
+        font-size: var(--font-size-5xl);
+        color: var(--color-darkslategray-600);
+      }
+      .wh-dashboard-item {
+        position: absolute;
+        top: 287.24px;
+        left: 432.24px;
+        width: 29.51px;
+        height: 29.51px;
+      }
+      .wh-dashboard-inner {
+        position: absolute;
+        top: 336.74px;
+        left: 432.74px;
+        width: 29.01px;
+        height: 29.01px;
+      }
+      .dasheur {
+        top: 517px;
+        left: 825.5px;
+        font-size: var(--font-size-3xs);
+        letter-spacing: 0.3px;
+        color: var(--color-darkgray-100);
+      }
+      .dasheur,
+      .div7,
+      .eur2 {
+        position: absolute;
+      }
+      .eur2 {
+        top: 534px;
+        left: 823.5px;
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-500);
+        text-align: left;
+      }
+      .div7 {
+        top: 516px;
+        left: 884px;
+        font-size: var(--font-size-2xs);
+        letter-spacing: 0.41px;
+        color: var(--color-dimgray-200);
+      }
+      .rectangle-div {
+        position: absolute;
+        top: 562px;
+        left: 820px;
+        background-color: var(--color-whitesmoke-200);
+        width: 182px;
+        height: 1px;
+      }
+      .etheur {
+        top: 582px;
+        left: 824.5px;
+        font-size: var(--font-size-3xs);
+        letter-spacing: 0.3px;
+        color: var(--color-darkgray-100);
+      }
+      .div8,
+      .etheur,
+      .eur3 {
+        position: absolute;
+      }
+      .eur3 {
+        top: 599px;
+        left: 823.5px;
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-500);
+        text-align: left;
+      }
+      .div8 {
+        top: 581px;
+        left: 877.5px;
+        font-size: var(--font-size-2xs);
+        letter-spacing: 0.41px;
+        color: var(--color-dimgray-200);
+      }
+      .wh-dashboard-child1 {
+        position: absolute;
+        top: 627px;
+        left: 820px;
+        background-color: var(--color-whitesmoke-200);
+        width: 182px;
+        height: 1px;
+      }
+      .ltceur {
+        position: absolute;
+        top: 646px;
+        left: 824.5px;
+        font-size: var(--font-size-3xs);
+        letter-spacing: 0.3px;
+        color: var(--color-darkgray-100);
+      }
+      .span6 {
+        font-weight: 300;
+      }
+      .div9,
+      .eur4 {
+        position: absolute;
+      }
+      .eur4 {
+        top: 663px;
+        left: 823.5px;
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-500);
+        text-align: left;
+      }
+      .div9 {
+        top: 645px;
+        left: 877.5px;
+        font-size: var(--font-size-2xs);
+        letter-spacing: 0.41px;
+        color: var(--color-dimgray-200);
+      }
+      .wh-dashboard-child2 {
+        position: absolute;
+        top: 691px;
+        left: 820px;
+        background-color: var(--color-whitesmoke-200);
+        width: 182px;
+        height: 1px;
+      }
+      .btceur {
+        top: 711px;
+        left: 825.5px;
+        font-size: var(--font-size-3xs);
+        letter-spacing: 0.3px;
+        color: var(--color-darkgray-100);
+      }
+      .btceur,
+      .div10,
+      .eur5 {
+        position: absolute;
+      }
+      .eur5 {
+        top: 728px;
+        left: 823.5px;
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-500);
+        text-align: left;
+      }
+      .div10 {
+        top: 710px;
+        left: 877.5px;
+        font-size: var(--font-size-2xs);
+        letter-spacing: 0.41px;
+        color: var(--color-dimgray-200);
+      }
+      .dec-2018,
+      .valuecash-announces {
+        position: absolute;
+        left: 1071px;
+        text-align: left;
+        display: inline-block;
+      }
+      .valuecash-announces {
+        top: 688px;
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.35px;
+        color: var(--color-gray-400);
+        width: 252px;
+      }
+      .dec-2018 {
+        top: 731px;
+        letter-spacing: 0.3px;
+        color: var(--color-darkgray-100);
+        width: 103.5px;
+      }
+      .all {
+        left: 1226px;
+        color: var(--color-darkslategray-800);
+      }
+      .all,
+      .recent,
+      .send {
+        position: absolute;
+        top: 170px;
+        font-size: var(--font-size-2xs);
+      }
+      .send {
+        left: 1256.5px;
+        letter-spacing: 0.41px;
+      }
+      .recent {
+        left: 1296px;
+      }
+      .my-wallets,
+      .news {
+        position: absolute;
+        top: 655px;
+        left: 1067px;
+        font-size: var(--font-size-base);
+        letter-spacing: 0.3px;
+        color: var(--color-gray-400);
+      }
+      .my-wallets {
+        top: 109px;
+        left: 408px;
+        color: var(--color-darkslategray-800);
+      }
+      .group-child,
+      .group-icon {
+        position: absolute;
+        top: 155px;
+        left: 564px;
+        width: 35px;
+        height: 35px;
+      }
+      .group-child {
+        top: 0;
+        left: 0;
+        border-radius: var(--br-11xs);
+        background-color: var(--primary-contrast);
+        border: 1px solid var(--color-whitesmoke-200);
+        box-sizing: border-box;
+      }
+      .shape-icon {
+        position: absolute;
+        top: 8.75px;
+        left: 9.84px;
+        width: 15.31px;
+        height: 17.5px;
+      }
+      .rectangle-parent,
+      .wh-dashboard-child3 {
+        position: absolute;
+        top: 156px;
+        left: 841px;
+        width: 35px;
+        height: 35px;
+      }
+      .wh-dashboard-child3 {
+        top: 155px;
+        left: 703px;
+      }
+      .btc1,
+      .ethereum1 {
+        position: absolute;
+        top: 167px;
+        left: 424px;
+        letter-spacing: 0.26px;
+        color: var(--color-gray-400);
+      }
+      .ethereum1 {
+        top: 214px;
+        left: 642px;
+        font-size: var(--font-size-base);
+        letter-spacing: 0.34px;
+        font-weight: 300;
+        color: var(--color-darkslategray-800);
+      }
+      .eth {
+        top: 167px;
+        left: 642px;
+        letter-spacing: 0.26px;
+        color: var(--color-darkslategray-600);
+      }
+      .eth,
+      .litecoin1,
+      .ltc {
+        position: absolute;
+      }
+      .litecoin1 {
+        top: 214px;
+        left: 784px;
+        font-size: var(--font-size-base);
+        letter-spacing: 0.34px;
+        font-weight: 300;
+        color: var(--color-darkslategray-800);
+      }
+      .ltc {
+        top: 167px;
+        left: 785px;
+        letter-spacing: 0.26px;
+        color: var(--color-darkslategray-600);
+      }
+      .rectangle13 {
+        position: absolute;
+        top: 146px;
+        left: 908px;
+        border-radius: var(--br-11xs);
+        background-color: var(--color-azure);
+        border: 1px solid var(--color-whitesmoke-200);
+        box-sizing: border-box;
+        width: 120px;
+        height: 99.95px;
+      }
+      .group-div {
+        position: absolute;
+        top: 156px;
+        left: 981px;
+        width: 35px;
+        height: 35px;
+      }
+      .dash1,
+      .dash2 {
+        position: absolute;
+        left: 925px;
+      }
+      .dash1 {
+        top: 214px;
+        font-size: var(--font-size-base);
+        letter-spacing: 0.34px;
+        font-weight: 300;
+        color: var(--color-darkslategray-800);
+      }
+      .dash2 {
+        top: 167px;
+        letter-spacing: 0.26px;
+        color: var(--color-darkslategray-600);
+      }
+      .shape-icon1 {
+        position: relative;
+        width: 21.32px;
+        height: 12.74px;
+      }
+      .wh-dashboard-child4 {
+        position: absolute;
+        top: 386px;
+        left: 319px;
+        border-radius: var(--br-sm);
+        border: 2px solid var(--color-mediumaquamarine);
+        box-sizing: border-box;
+        width: 47px;
+        height: 23px;
+      }
+      .buy,
+      .dd-wallet {
+        position: absolute;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+      }
+      .buy {
+        top: 390px;
+        left: 332px;
+        color: #252529;
+      }
+      .dd-wallet {
+        top: 109px;
+        left: 958.5px;
+        color: var(--color-darkslategray-800);
+      }
+      .wh-dashboard-child5 {
+        position: absolute;
+        top: 335px;
+        left: 782px;
+        border-radius: var(--br-11xs);
+        background-color: var(--color-azure);
+        width: 231px;
+        height: 29px;
+      }
+      .wallet1 {
+        position: absolute;
+        top: 300px;
+        left: 730px;
+        font-size: var(--font-size-2xs);
+        letter-spacing: 0.41px;
+        text-transform: uppercase;
+        color: var(--color-gray-400);
+        text-align: right;
+      }
+      .receice-bitcoin {
+        position: absolute;
+        top: 391px;
+        left: 781px;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+      }
+      .wh-dashboard-child6,
+      .wh-dashboard-child7 {
+        position: absolute;
+        top: 292px;
+        left: 782px;
+        border-radius: var(--br-11xs);
+        background-color: var(--color-azure);
+        width: 65px;
+        height: 29px;
+      }
+      .wh-dashboard-child7 {
+        left: 930px;
+        width: 83px;
+      }
+      .wh-dashboard-child8 {
+        position: absolute;
+        top: 386px;
+        left: 956px;
+        border-radius: var(--br-sm);
+        border: 2px solid var(--color-mediumaquamarine);
+        box-sizing: border-box;
+        width: 57px;
+        height: 23px;
+      }
+      .btc2,
+      .div11 {
+        top: 300px;
+        color: var(--color-gray-400);
+        text-align: left;
+      }
+      .btc2 {
+        position: absolute;
+        left: 793px;
+        letter-spacing: 0.3px;
+      }
+      .div11 {
+        left: 940px;
+      }
+      .cs4wu6pu5qcz35bslnv,
+      .div11,
+      .send1 {
+        position: absolute;
+        letter-spacing: 0.3px;
+      }
+      .cs4wu6pu5qcz35bslnv {
+        top: 343px;
+        left: 790px;
+        color: var(--color-darkslategray-400);
+        text-align: left;
+        display: inline-block;
+        width: 213px;
+      }
+      .send1 {
+        top: 390px;
+        left: 971px;
+        font-weight: 500;
+        color: var(--color-gray-400);
+      }
+      .mask-icon {
+        position: absolute;
+        top: 47px;
+        left: 1003px;
+        width: 14px;
+        height: 14px;
+      }
+      .mask-icon1,
+      .object-icon {
+        position: relative;
+        width: 7.27px;
+        height: 14.25px;
+      }
+      .object-icon {
+        position: absolute;
+        top: 300px;
+        left: 834px;
+      }
+      .mask-icon2 {
+        position: relative;
+        width: 18px;
+        height: 12px;
+      }
+      .mask-icon3,
+      .object-icon1 {
+        position: relative;
+        width: 16px;
+        height: 16px;
+      }
+      .object-icon1 {
+        position: absolute;
+        top: 46px;
+        left: 1338px;
+      }
+      .mask-icon4,
+      .object-icon2 {
+        position: relative;
+        width: 4px;
+        height: 16px;
+      }
+      .object-icon2 {
+        position: absolute;
+        top: 111px;
+        left: 193px;
+      }
+      .mask-icon5,
+      .object-icon3 {
+        position: relative;
+        width: 17.49px;
+        height: 17.49px;
+      }
+      .object-icon3 {
+        position: absolute;
+        top: 44px;
+        left: 553px;
+      }
+      .wh-dashboard-child9 {
+        position: absolute;
+        top: 477px;
+        left: 611px;
+        border-radius: var(--br-sm);
+        background-color: var(--color-whitesmoke-100);
+        width: 37px;
+        height: 23px;
+      }
+      .m {
+        left: 585px;
+      }
+      .all1,
+      .m,
+      .m1,
+      .m2,
+      .y {
+        position: absolute;
+        top: 481px;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+      }
+      .m1 {
+        left: 620px;
+        color: var(--color-gray-400);
+      }
+      .all1,
+      .m2,
+      .y {
+        left: 657px;
+      }
+      .all1,
+      .y {
+        left: 693px;
+      }
+      .all1 {
+        left: 726px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .k,
+      .k1,
+      .k2,
+      .k3,
+      .k4,
+      .nov,
+      .nov1,
+      .oct {
+        position: absolute;
+        top: 569.65px;
+        left: 144px;
+        font-size: var(--font-size-3xs);
+        letter-spacing: 0.25px;
+        font-weight: 500;
+        display: inline-block;
+        width: 39px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .k1,
+      .k2,
+      .k3,
+      .k4,
+      .nov,
+      .nov1,
+      .oct {
+        top: 532.2px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .k2,
+      .k3,
+      .k4,
+      .nov,
+      .nov1,
+      .oct {
+        top: 607.1px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .k3,
+      .k4,
+      .nov,
+      .nov1,
+      .oct {
+        top: 644.55px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .k4,
+      .nov,
+      .nov1,
+      .oct {
+        top: 682px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .nov,
+      .nov1,
+      .oct {
+        top: 716px;
+        left: 209px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .nov,
+      .nov1 {
+        left: 309px;
+      }
+      .dec,
+      .dec1,
+      .jan,
+      .nov1 {
+        left: 409px;
+      }
+      .dec,
+      .dec1,
+      .jan {
+        left: 509px;
+      }
+      .dec1,
+      .jan {
+        left: 609px;
+      }
+      .jan {
+        left: 709px;
+      }
+      .wh-dashboard-child10,
+      .wh-dashboard-child11,
+      .wh-dashboard-child12,
+      .wh-dashboard-child13,
+      .wh-dashboard-child14 {
+        position: absolute;
+        top: 539px;
+        left: 200px;
+        background-color: var(--color-whitesmoke-200);
+        width: 539px;
+        height: 1px;
+      }
+      .wh-dashboard-child11,
+      .wh-dashboard-child12,
+      .wh-dashboard-child13,
+      .wh-dashboard-child14 {
+        top: 576.25px;
+      }
+      .wh-dashboard-child12,
+      .wh-dashboard-child13,
+      .wh-dashboard-child14 {
+        top: 613.5px;
+      }
+      .wh-dashboard-child13,
+      .wh-dashboard-child14 {
+        top: 650.75px;
+      }
+      .wh-dashboard-child14 {
+        top: 688px;
+      }
+      .wh-dashboard-child15 {
+        position: absolute;
+        top: 689px;
+        left: 224px;
+        background-color: var(--color-darkslategray-700);
+        width: 1px;
+        height: 4px;
+      }
+      .wh-dashboard-child16,
+      .wh-dashboard-child17,
+      .wh-dashboard-child18,
+      .wh-dashboard-child19,
+      .wh-dashboard-child20 {
+        position: absolute;
+        top: 689px;
+        left: 325.4px;
+        background-color: var(--color-darkslategray-700);
+        width: 1px;
+        height: 4px;
+      }
+      .wh-dashboard-child17,
+      .wh-dashboard-child18,
+      .wh-dashboard-child19,
+      .wh-dashboard-child20 {
+        left: 426.8px;
+      }
+      .wh-dashboard-child18,
+      .wh-dashboard-child19,
+      .wh-dashboard-child20 {
+        left: 528.2px;
+      }
+      .wh-dashboard-child19,
+      .wh-dashboard-child20 {
+        left: 629.6px;
+      }
+      .wh-dashboard-child20 {
+        left: 731px;
+      }
+      .path-4-icon {
+        position: absolute;
+        top: 564.85px;
+        left: 203px;
+        width: 536.42px;
+        height: 109.25px;
+      }
+      .group-inner,
+      .object-icon4,
+      .object-icon5,
+      .object-icon6 {
+        position: absolute;
+        top: 293px;
+        left: 648px;
+        width: 4px;
+        height: 16px;
+      }
+      .group-inner,
+      .object-icon5,
+      .object-icon6 {
+        top: 342px;
+      }
+      .group-inner,
+      .object-icon6 {
+        top: 392px;
+      }
+      .group-inner {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--br-11xs);
+        background-color: var(--primary-contrast);
+      }
+      .span7 {
+        letter-spacing: 0.25px;
+      }
+      .dec-20182 {
+        letter-spacing: 0.21px;
+      }
+      .dec-20181 {
+        position: absolute;
+        top: calc(50% - 21px);
+        left: 3.99%;
+        font-size: var(--font-size-3xs);
+      }
+      .btc3 {
+        position: absolute;
+        top: calc(50% - 23px);
+        left: 71.38%;
+        color: var(--color-darkgray-100);
+        text-align: right;
+      }
+      .group,
+      .mask-icon9 {
+        position: absolute;
+        overflow: hidden;
+      }
+      .mask-icon9 {
+        height: 11.11%;
+        width: 4.35%;
+        top: 22.22%;
+        right: 30.07%;
+        bottom: 66.67%;
+        left: 65.58%;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .group {
+        top: 213px;
+        left: 1066px;
+        width: 276px;
+        height: 72px;
+        color: var(--color-gray-400);
+      }
+      .dec-20183 {
+        position: absolute;
+        top: calc(50% - 21px);
+        left: 4.17%;
+        font-size: var(--font-size-3xs);
+      }
+      .fum1abgcnc4y5tskdb {
+        position: absolute;
+        width: 84.78%;
+        top: calc(50% + 10px);
+        left: 5.8%;
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-400);
+        text-align: left;
+        display: inline-block;
+      }
+      .group1 {
+        position: absolute;
+        top: 293px;
+        left: 1066px;
+        width: 276px;
+        height: 72px;
+        overflow: hidden;
+        color: var(--color-darkslategray-300);
+      }
+      .dec-20185 {
+        position: absolute;
+        top: calc(50% - 21px);
+        left: 5.8%;
+        font-size: var(--font-size-3xs);
+      }
+      .btc5 {
+        position: absolute;
+        top: calc(50% - 23px);
+        left: 76.45%;
+        color: var(--color-darkgray-100);
+        text-align: right;
+      }
+      .m5tdpv8g6yfckkrneyh {
+        position: absolute;
+        width: 86.59%;
+        top: calc(50% + 10px);
+        left: 5.8%;
+        letter-spacing: 0.3px;
+        display: inline-block;
+      }
+      .mask-icon11 {
+        height: 11.11%;
+        width: 4.35%;
+        top: 22.22%;
+        right: 25%;
+        bottom: 66.67%;
+        left: 70.65%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+      }
+      .btc6,
+      .group2,
+      .mask-icon11 {
+        position: absolute;
+      }
+      .group2 {
+        top: 373px;
+        left: 1066px;
+        width: 276px;
+        height: 72px;
+        overflow: hidden;
+        text-align: left;
+        color: var(--color-darkslategray-300);
+      }
+      .btc6 {
+        top: calc(50% - 23px);
+        left: 66.3%;
+        color: var(--color-darkgray-100);
+        text-align: right;
+      }
+      .p9rqer2xee3peb44ze3 {
+        position: absolute;
+        width: 84.78%;
+        top: calc(50% + 10px);
+        left: 5.8%;
+        letter-spacing: 0.3px;
+        color: var(--color-darkslategray-400);
+        display: inline-block;
+      }
+      .group3,
+      .mask-icon12 {
+        position: absolute;
+        overflow: hidden;
+      }
+      .mask-icon12 {
+        height: 11.11%;
+        width: 4.35%;
+        top: 22.22%;
+        right: 34.78%;
+        bottom: 66.67%;
+        left: 60.87%;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .group3 {
+        top: 453px;
+        left: 1066px;
+        width: 276px;
+        height: 72px;
+        text-align: left;
+        color: var(--color-darkslategray-300);
+      }
+      .agm6jc43fuayrkm8wj2,
+      .ltc1 {
+        position: absolute;
+        letter-spacing: 0.3px;
+      }
+      .ltc1 {
+        top: calc(50% - 23px);
+        left: 77.17%;
+        color: var(--color-darkgray-100);
+        text-align: right;
+      }
+      .agm6jc43fuayrkm8wj2 {
+        width: 90.58%;
+        top: calc(50% + 10px);
+        left: 5.8%;
+        color: var(--color-darkslategray-400);
+        display: inline-block;
+      }
+      .mask-icon13 {
+        height: 11.11%;
+        width: 4.35%;
+        top: 22.22%;
+        right: 24.64%;
+        bottom: 66.67%;
+        left: 71.01%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+      }
+      .group4,
+      .mask-icon13,
+      .oval-5 {
+        position: absolute;
+      }
+      .group4 {
+        top: 533px;
+        left: 1066px;
+        width: 276px;
+        height: 72px;
+        overflow: hidden;
+        text-align: left;
+        color: var(--color-darkslategray-300);
+      }
+      .oval-5 {
+        top: 383px;
+        left: 433px;
+        border-radius: 50%;
+        border: 2px solid var(--color-whitesmoke-200);
+        box-sizing: border-box;
+        width: 28.51px;
+        height: 28.51px;
+      }
+      .oval-4-icon {
+        position: absolute;
+        top: 405.59px;
+        left: 446.95px;
+        width: 10.73px;
+        height: 6.27px;
+      }
+      .path-2-icon,
+      .path-8-icon {
+        position: absolute;
+        top: 531.9px;
+        left: 934.56px;
+        width: 70.5px;
+        height: 7.95px;
+      }
+      .path-2-icon {
+        top: 575.17px;
+        left: 934.15px;
+        width: 71.22px;
+        height: 27.13px;
+      }
+      .path-10-icon,
+      .path-5-icon {
+        position: absolute;
+        top: 644.23px;
+        left: 934.28px;
+        width: 70.9px;
+        height: 21.29px;
+      }
+      .path-10-icon {
+        top: 704.1px;
+        left: 932.88px;
+        width: 70.54px;
+        height: 33.8px;
+      }
+      .support {
+        position: absolute;
+        top: calc(50% - 7.5px);
+        left: 39.06%;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+      }
+      .mask-icon14 {
+        position: relative;
+        width: 14px;
+        height: 14px;
+      }
+      .object-icon7 {
+        position: absolute;
+        height: 40%;
+        width: 14.58%;
+        top: 30%;
+        right: 70.31%;
+        bottom: 30%;
+        left: 15.1%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+      }
+      .frame-child {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--br-11xs);
+        border: 1px solid var(--color-mediumaquamarine);
+        box-sizing: border-box;
+      }
+      .support-parent {
+        position: absolute;
+        top: 36px;
+        left: 883.5px;
+        width: 96px;
+        height: 35px;
+        overflow: hidden;
+      }
+      .frame-item,
+      .rectangle14 {
+        position: absolute;
+        height: 99.88%;
+        width: 97.83%;
+        top: 0;
+        right: 2.11%;
+        bottom: 0.12%;
+        left: 0.07%;
+        background-color: var(--color-whitesmoke-100);
+      }
+      .frame-item {
+        height: 7.53%;
+        top: 18.55%;
+        bottom: 73.92%;
+        background-color: var(--color-lightcyan);
+      }
+      .mask-child,
+      .mask-child1,
+      .mask-inner,
+      .mask-item {
+        position: absolute;
+        height: 55.04%;
+        width: 42.43%;
+        top: 1082.53%;
+        right: -191.51%;
+        bottom: -1037.56%;
+        left: 249.08%;
+        border-radius: 1.04px 0 0 0;
+        background-color: var(--color-gainsboro-300);
+      }
+      .mask-child1,
+      .mask-inner,
+      .mask-item {
+        height: 33.1%;
+        right: -249.08%;
+        bottom: -1015.63%;
+        left: 306.65%;
+        border-radius: 0 1.04px 0 0;
+      }
+      .mask-child1,
+      .mask-inner {
+        top: 1149.43%;
+        right: -191.51%;
+        bottom: -1082.53%;
+        left: 249.08%;
+        border-radius: 0 0 0 1.04px;
+      }
+      .mask-child1 {
+        height: 55.04%;
+        top: 1127.49%;
+        right: -249.08%;
+        left: 306.65%;
+        border-radius: 0 0 1.04px 0;
+      }
+      .mask {
+        position: relative;
+        background-color: var(--color-darkslategray-800);
+        width: 15.2px;
+        height: 15.71px;
+      }
+      .object1 {
+        position: absolute;
+        height: 1.96%;
+        width: 16.52%;
+        top: 21.23%;
+        right: 42.33%;
+        bottom: 76.81%;
+        left: 41.15%;
+      }
+      .combined-shape-icon,
+      .combined-shape-icon1 {
+        position: relative;
+        width: 15.2px;
+        height: 15.6px;
+      }
+      .combined-shape-icon1 {
+        height: 15.2px;
+      }
+      .combined-shape-icon2 {
+        position: relative;
+        width: 14.41px;
+        height: 15.75px;
+      }
+      .combined-shape-child,
+      .combined-shape-item {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 2960.55%;
+        right: -251.06%;
+        bottom: -2960.55%;
+        left: 251.06%;
+        border-radius: 1.04px;
+        background-color: var(--color-gainsboro-300);
+      }
+      .combined-shape-item {
+        height: 17.19%;
+        width: 73.04%;
+        top: 2970.09%;
+        right: -237.34%;
+        bottom: -2887.28%;
+        left: 264.3%;
+        border-radius: 0.52px;
+      }
+      .combined-shape-child1,
+      .combined-shape-child2,
+      .combined-shape-child3,
+      .combined-shape-inner {
+        position: absolute;
+        height: 17.23%;
+        width: 17.8%;
+        top: 3001.93%;
+        right: -193.39%;
+        bottom: -2919.16%;
+        left: 275.59%;
+        border-radius: 0.52px;
+        background-color: var(--color-gainsboro-300);
+      }
+      .combined-shape-child1,
+      .combined-shape-child2,
+      .combined-shape-child3 {
+        right: -226.04%;
+        left: 308.24%;
+      }
+      .combined-shape-child2,
+      .combined-shape-child3 {
+        top: 3030.1%;
+        right: -193.39%;
+        bottom: -2947.33%;
+        left: 275.59%;
+      }
+      .combined-shape-child3 {
+        right: -226.04%;
+        left: 308.24%;
+      }
+      .combined-shape {
+        position: relative;
+        background-color: var(--color-silver-100);
+        width: 15.1px;
+        height: 15.6px;
+      }
+      .combined-shape-icon4 {
+        position: relative;
+        width: 15.79px;
+        height: 15.79px;
+      }
+      .combined-shape-icon5 {
+        position: relative;
+        width: 15.01px;
+        height: 15.2px;
+      }
+      .frame-inner {
+        height: 4.24%;
+        width: 36.96%;
+        top: 91.26%;
+        right: 33.7%;
+        bottom: 4.49%;
+        left: 29.35%;
+        border-radius: var(--br-11xs);
+        background-color: var(--color-silver-100);
+      }
+      .b1,
+      .frame-inner,
+      .oval {
+        position: absolute;
+      }
+      .oval {
+        height: 1.87%;
+        width: 16.3%;
+        top: 90.39%;
+        right: 26.09%;
+        bottom: 7.74%;
+        left: 57.61%;
+        border-radius: 50%;
+        background-color: var(--color-darkslategray-800);
+      }
+      .b1 {
+        top: calc(50% + 324.5px);
+        left: 61.96%;
+        letter-spacing: 0.14px;
+      }
+      .mask-icon15 {
+        position: relative;
+        width: 20px;
+        height: 20px;
+      }
+      .rectangle-group {
+        position: absolute;
+        top: -0.5px;
+        left: -0.5px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #000;
+        box-sizing: border-box;
+        width: 92px;
+        height: 801px;
+        overflow: hidden;
+        font-size: var(--font-size-2xs);
+        color: var(--color-lightcyan);
+      }
+      .neoai-logo-notext-200x200px-icon {
+        position: absolute;
+        top: 28px;
+        left: 23px;
+        width: 43px;
+        height: 43px;
+        object-fit: cover;
+      }
+      .wh-dashboard {
+        position: relative;
+        background-color: var(--primary-contrast);
+        width: 100%;
+        height: 800px;
+        overflow: hidden;
+        text-align: center;
+        font-size: var(--font-size-xs);
+        color: var(--color-dimgray-100);
+        font-family: var(--font-roboto);
+      }
+      
+      /* Paste the contents of global.css below this line */
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+      
+      :root {
+        /* fonts */
+        --font-roboto: Roboto;
+        --font-baloo-bhai: "Baloo Bhai";
+      
+        /* font sizes */
+        --font-size-2xs: 11px;
+        --font-size-xs: 12px;
+        --font-size-3xs: 10px;
+        --font-size-base: 16px;
+        --font-size-sm: 14px;
+        --font-size-5xl: 24px;
+        --font-size-smi: 13px;
+        --font-size-15xl: 34px;
+        --font-size-xl: 20px;
+        --font-size-mini: 15px;
+        --font-size-sm-5: 13.5px;
+        --font-size-xs-2: 11.2px;
+        --font-size-3xl-4: 22.4px;
+        --font-size-base-5: 16.5px;
+        --font-size-3xl: 22px;
+        --font-size-4xl-9: 23.9px;
+        --font-size-9xl-4: 28.4px;
+        --font-size-2xs-5: 10.5px;
+        --font-size-mid-9: 17.9px;
+        --font-size-3xs-7: 9.7px;
+        --font-size-4xs: 9px;
+      
+        /* Colors */
+        --primary-contrast: #fff;
+        --color-lightcyan: #daf8f1;
+        --color-darkslategray-300: #4a4a4a;
+        --color-darkslategray-400: #42434b;
+        --color-darkslategray-100: #424242;
+        --color-darkslategray-500: #3f4048;
+        --color-darkslategray-600: #3a3c43;
+        --color-darkslategray-700: #323235;
+        --color-darkslategray-200: #303030;
+        --color-darkslategray-800: #0e3e38;
+        --color-silver-100: #cac9ca;
+        --color-silver: #bdbdbd;
+        --color-gainsboro-100: #e0e0e0;
+        --color-gainsboro-300: #dadada;
+        --color-gainsboro-200: rgba(226, 226, 226, 0.1);
+        --color-whitesmoke-100: #f1f1f1;
+        --color-whitesmoke: #eaeaea;
+        --color-whitesmoke-200: #eae8eb;
+        --color-mediumaquamarine: #89cebd;
+        --color-dimgray-100: #606166;
+        --color-dimgray: #616161;
+        --color-dimgray-200: #4c4d55;
+        --color-darkgray-100: #a7a4a8;
+        --color-darkgray: #999;
+        --color-gray-100: #8e8e94;
+        --color-gray-400: #2a2b31;
+        --color-gray-500: #1d2024;
+        --color-gray-200: rgba(0, 0, 0, 0.6);
+        --color-gray-300: rgba(0, 0, 0, 0.87);
+        --other-outlined-border: rgba(0, 0, 0, 0.23);
+        --color-azure: #e8faf6;
+        --color-ghostwhite: #eff0f6;
+        --color-orange: #f99a0e;
+        --color-cornflowerblue-100: #1262af;
+        --color-cornflowerblue-200: #1262ae;
+        --color-lavender: #ccdcec;
+      
+        /* Gaps */
+        --gap-3xl-4: 22.4px;
+        --gap-5xs-5: 7.5px;
+        --gap-mini: 15px;
+        --gap-mid-2: 17.2px;
+        --gap-4xs-2: 8.2px;
+        --gap-8xs-5: 4.5px;
+        --gap-mid-9: 17.9px;
+        --gap-10xs-2: 2.2px;
+        --gap-7xl-9: 26.9px;
+        --gap-7xs: 6px;
+      
+        /* Paddings */
+        --padding-21xl: 40px;
+        --padding-5xl: 24px;
+        --padding-11xl: 30px;
+        --padding-mini: 15px;
+        --padding-7xs: 6px;
+        --padding-base-4: 16.4px;
+        --padding-4xs: 9px;
+        --padding-40xl-8: 59.8px;
+        --padding-xs-2: 11.2px;
+        --padding-3xs-7: 9.7px;
+        --padding-xs: 12px;
+        --padding-base: 16px;
+        --padding-xl: 20px;
+        --padding-9xs-7: 3.7px;
+        --padding-10xs: 3px;
+        --padding-10xs-2: 2.2px;
+        --padding-8xs-5: 4.5px;
+      
+        /* border radiuses */
+        --br-11xs: 2px;
+        --br-12xs-5: 0.5px;
+        --br-12xs: 1px;
+        --br-sm: 14px;
+        --br-10xs: 3px;
+        --br-4xl-2: 23.2px;
+        --br-5xs-5: 7.5px;
+        --br-xs: 12px;
+        --br-28xl-8: 47.8px;
+      }
+      
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo Bhai:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="wh-dashboard">
+      <div class="rectangle"></div>
+      <div class="rectangle1"></div>
+      <div class="rectangle2"></div>
+      <div class="rectangle3"></div>
+      <div class="rectangle4"></div>
+      <div class="rectangle5"></div>
+      <div class="rectangle6"></div>
+      <div class="rectangle7"></div>
+      <div class="rectangle8"></div>
+      <div class="rectangle9"></div>
+      <div class="rectangle10"></div>
+      <b class="send-to">Send to</b>
+      <b class="amount">Amount</b>
+      <div class="rectangle11"></div>
+      <div class="rectangle12"></div>
+      <div class="markets"><span class="marke">Marke</span>ts</div>
+      <b class="usd">
+        <span class="us">US</span>
+        <span class="d">D</span>
+      </b>
+      <b class="eur">
+        <span class="us">EU</span>
+        <span class="d">R</span>
+      </b>
+      <b class="btc">
+        <span class="us">BT</span>
+        <span class="d">C</span>
+      </b>
+      <div class="bitcoin-chart"><span class="marke">Bitcoin Char</span>t</div>
+      <div class="dashboard">NeoDash</div>
+      <div class="current-balance">Current balance</div>
+      <b class="b">+12%</b>
+      <b class="eur1">4.342.5 EUR</b>
+      <div class="bitcoin">Bitcoin</div>
+      <div class="ethereum">Ethereum</div>
+      <div class="litecoin">Litecoin</div>
+      <div class="overview">
+        <span class="overvie">Overvie</span>
+        <span class="w">w</span>
+      </div>
+      <div class="wh-dashboard-child"></div>
+      <div class="wallets"><span class="marke">Wallet</span>s</div>
+      <div class="div">3.4330</div>
+      <b class="usd1">USD </b>
+      <div class="div1">
+        <span class="marke">81%</span>
+      </div>
+      <div class="div2">
+        <span class="marke">12%</span>
+      </div>
+      <div class="div3">7%</div>
+      <div class="div4">
+        <span class="marke">5</span>
+      </div>
+      <div class="transactions">Transactions</div>
+      <div class="div5">
+        <span class="bitcoi">2,345</span>
+        <span class="n"> </span>
+      </div>
+      <b class="dash">Dash</b>
+      <b class="nikita-resheteev">Elon Musk</b>
+      <div class="search"><span class="marke">Search</span>…</div>
+      <div class="transactions1"><span class="marke">Transactio</span>ns</div>
+      <div class="bitcoin1">
+        <span class="bitcoi">Bitcoi</span>
+        <span class="n">n</span>
+      </div>
+      <div class="div6"><span class="marke">0.9223</span>4</div>
+      <img class="wh-dashboard-item" alt="" src="./public/group-2.svg" />
+
+      <img class="wh-dashboard-inner" alt="" src="./public/group-21.svg" />
+
+      <b class="dasheur">DASH/EUR</b>
+      <div class="eur2">
+        <b>0.0834 </b>
+        <span>EUR</span>
+      </div>
+      <div class="div7">1.93%</div>
+      <div class="rectangle-div"></div>
+      <b class="etheur">ETH/EUR</b>
+      <div class="eur3">
+        <b>1,087.91 </b>
+        <span>EUR</span>
+      </div>
+      <div class="div8">-1.14%</div>
+      <div class="wh-dashboard-child1"></div>
+      <b class="ltceur">LTC/EUR</b>
+      <div class="eur4">
+        <b>197.48</b>
+        <span class="span6"> </span>
+        <span>EUR</span>
+      </div>
+      <div class="div9">-0.48%</div>
+      <div class="wh-dashboard-child2"></div>
+      <b class="btceur">BTC/EUR</b>
+      <div class="eur5">
+        <b>11,435.18 </b>
+        <span>EUR</span>
+      </div>
+      <div class="div10">1.75%</div>
+      <div class="valuecash-announces">
+        ValueCash Announces ICO to Reform E-Commerce With Its PoT Protocol
+      </div>
+      <div class="dec-2018">16:23, 12 dec 2018</div>
+      <b class="all">
+        <span class="us">AL</span>
+        <span class="d">L</span>
+      </b>
+      <b class="send">SEND</b>
+      <b class="recent">
+        <span class="us">RECEN</span>
+        <span class="d">T</span>
+      </b>
+      <div class="news">News</div>
+      <div class="my-wallets">My wallets</div>
+      <img class="group-icon" alt="" src="./public/group-3.svg" />
+
+      <div class="rectangle-parent">
+        <div class="group-child"></div>
+        <img class="shape-icon" alt="" src="./public/shape.svg" />
+      </div>
+      <img class="wh-dashboard-child3" alt="" src="./public/group-4.svg" />
+
+      <b class="btc1">BTC</b>
+      <div class="ethereum1">Ethereum</div>
+      <b class="eth">ETH</b>
+      <div class="litecoin1">Litecoin</div>
+      <b class="ltc">LTC</b>
+      <div class="rectangle13"></div>
+      <div class="group-div">
+        <div class="group-child"></div>
+      </div>
+      <div class="dash1">Dash</div>
+      <b class="dash2">DASH</b>
+      <img class="shape-icon1" alt="" src="./public/shape1.svg" />
+
+      <div class="wh-dashboard-child4"></div>
+      <div class="buy">buy</div>
+      <div class="dd-wallet">Аdd wallet</div>
+      <div class="wh-dashboard-child5"></div>
+      <b class="wallet1">Wallet</b>
+      <div class="receice-bitcoin">Receive Bitcoin</div>
+      <div class="wh-dashboard-child6"></div>
+      <div class="wh-dashboard-child7"></div>
+      <div class="wh-dashboard-child8"></div>
+      <div class="btc2">BTC</div>
+      <div class="div11">0.233455</div>
+      <div class="cs4wu6pu5qcz35bslnv">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzb</div>
+      <div class="send1">send</div>
+      <img class="mask-icon" alt="" src="./public/mask.svg" />
+
+      <div class="mask-icon"></div>
+      <img class="mask-icon1" alt="" src="./public/mask1.svg" />
+
+      <img class="object-icon" alt="" />
+
+      <img class="mask-icon2" alt="" src="./public/mask2.svg" />
+
+      <img class="mask-icon3" alt="" src="./public/mask3.svg" />
+
+      <img class="object-icon1" alt="" />
+
+      <img class="mask-icon4" alt="" src="./public/mask4.svg" />
+
+      <img class="object-icon2" alt="" />
+
+      <img class="mask-icon5" alt="" src="./public/mask5.svg" />
+
+      <img class="object-icon3" alt="" />
+
+      <div class="wh-dashboard-child9"></div>
+      <div class="m">1m</div>
+      <div class="m1">3m</div>
+      <div class="m2">6m</div>
+      <div class="y">1y</div>
+      <div class="all1">All</div>
+      <div class="k">15k</div>
+      <div class="k1">20k</div>
+      <div class="k2">10k</div>
+      <div class="k3">5k</div>
+      <div class="k4">0k</div>
+      <div class="oct">23 oct</div>
+      <div class="nov">6 nov</div>
+      <div class="nov1">20 nov</div>
+      <div class="dec">4 dec</div>
+      <div class="dec1">18 dec</div>
+      <div class="jan">1 jan</div>
+      <div class="wh-dashboard-child10"></div>
+      <div class="wh-dashboard-child11"></div>
+      <div class="wh-dashboard-child12"></div>
+      <div class="wh-dashboard-child13"></div>
+      <div class="wh-dashboard-child14"></div>
+      <div class="wh-dashboard-child15"></div>
+      <div class="wh-dashboard-child16"></div>
+      <div class="wh-dashboard-child17"></div>
+      <div class="wh-dashboard-child18"></div>
+      <div class="wh-dashboard-child19"></div>
+      <div class="wh-dashboard-child20"></div>
+      <img class="path-4-icon" alt="" src="./public/path-4.svg" />
+
+      <img class="mask-icon4" alt="" src="./public/mask4.svg" />
+
+      <img class="object-icon4" alt="" />
+
+      <img class="mask-icon4" alt="" src="./public/mask4.svg" />
+
+      <img class="object-icon5" alt="" />
+
+      <img class="mask-icon4" alt="" src="./public/mask4.svg" />
+
+      <img class="object-icon6" alt="" />
+
+      <div class="group">
+        <div class="group-inner"></div>
+        <div class="dec-20181">
+          <span class="span7">16:2</span>
+          <span class="dec-20182">3, 12 dec 2018</span>
+        </div>
+        <div class="btc3"><span class="marke">0.009 BT</span>C</div>
+        <div class="fum1abgcnc4y5tskdb">1PRj85hu9RXPZTzxtko9stfs6nRo1vyrQB</div>
+        <img class="mask-icon9" alt="" src="./public/mask6.svg" />
+      </div>
+      <div class="group1">
+        <div class="group-inner"></div>
+        <div class="dec-20183">
+          <span class="span7">15:00</span>
+          <span class="dec-20182">, 12 dec 2018</span>
+        </div>
+        <div class="btc3"><span class="marke">0.007 BT</span>C</div>
+        <div class="fum1abgcnc4y5tskdb">14FuM1aBgcNc4Y5TskDBqhwknVpRnkwjbx</div>
+        <img class="mask-icon9" alt="" src="./public/mask7.svg" />
+      </div>
+      <div class="group2">
+        <div class="group-inner"></div>
+        <div class="dec-20185">
+          <span class="span7">11:00</span>
+          <span class="dec-20182">, 11 dec 2018</span>
+        </div>
+        <div class="btc5"><span class="marke">0.3 BT</span>C</div>
+        <div class="m5tdpv8g6yfckkrneyh">
+          1M5TdPV8G6YfcKkrNEyhPu3nBpWtGXJGho
+        </div>
+        <img class="mask-icon11" alt="" src="./public/mask8.svg" />
+      </div>
+      <div class="group3">
+        <div class="group-inner"></div>
+        <div class="dec-20185">
+          <span class="span7">09:2</span>
+          <span class="dec-20182">3, 11 dec 2018</span>
+        </div>
+        <div class="btc6"><span class="marke">0.00945 BT</span>C</div>
+        <div class="p9rqer2xee3peb44ze3">
+          1P9RQEr2XeE3PEb44ZE35sfZRRW1JHU8qx
+        </div>
+        <img class="mask-icon12" alt="" src="./public/mask9.svg" />
+      </div>
+      <div class="group4">
+        <div class="group-inner"></div>
+        <div class="dec-20185">
+          <span class="span7">09:2</span>
+          <span class="dec-20182">7, 11 dec 2018</span>
+        </div>
+        <div class="ltc1">0.5 LTC</div>
+        <div class="agm6jc43fuayrkm8wj2">
+          1AGm6Jc43FUaYRKm8wj2cBpJ7FWgjxwCXW
+        </div>
+        <img class="mask-icon13" alt="" src="./public/mask10.svg" />
+      </div>
+      <div class="oval-5"></div>
+      <img class="oval-4-icon" alt="" src="./public/oval-4.svg" />
+
+      <img class="path-8-icon" alt="" src="./public/path-8.svg" />
+
+      <img class="path-2-icon" alt="" src="./public/path-2.svg" />
+
+      <img class="path-5-icon" alt="" src="./public/path-5.svg" />
+
+      <img class="path-10-icon" alt="" src="./public/path-10.svg" />
+
+      <div class="support-parent">
+        <div class="support">Support</div>
+        <img class="mask-icon14" alt="" src="./public/mask11.svg" />
+
+        <img class="object-icon7" alt="" />
+
+        <div class="frame-child"></div>
+      </div>
+      <div class="rectangle-group">
+        <div class="rectangle14"></div>
+        <div class="frame-item"></div>
+        <div class="mask">
+          <div class="mask-child"></div>
+          <div class="mask-item"></div>
+          <div class="mask-inner"></div>
+          <div class="mask-child1"></div>
+        </div>
+        <div class="object1"></div>
+        <img
+          class="combined-shape-icon"
+          alt=""
+          src="./public/combined-shape.svg"
+        />
+
+        <img
+          class="combined-shape-icon1"
+          alt=""
+          src="./public/combined-shape1.svg"
+        />
+
+        <img
+          class="combined-shape-icon2"
+          alt=""
+          src="./public/combined-shape2.svg"
+        />
+
+        <div class="combined-shape">
+          <div class="combined-shape-child"></div>
+          <div class="combined-shape-item"></div>
+          <div class="combined-shape-inner"></div>
+          <div class="combined-shape-child1"></div>
+          <div class="combined-shape-child2"></div>
+          <div class="combined-shape-child3"></div>
+        </div>
+        <img
+          class="combined-shape-icon"
+          alt=""
+          src="./public/combined-shape3.svg"
+        />
+
+        <img
+          class="combined-shape-icon4"
+          alt=""
+          src="./public/combined-shape4.svg"
+        />
+
+        <img
+          class="combined-shape-icon5"
+          alt=""
+          src="./public/combined-shape5.svg"
+        />
+
+        <div class="frame-inner"></div>
+        <div class="oval"></div>
+        <b class="b1">1</b>
+        <img class="mask-icon15" alt="" src="./public/mask12.svg" />
+      </div>
+      <img
+        class="neoai-logo-notext-200x200px-icon"
+        alt=""
+        src="./public/neoai-logo-notext-200x200px@2x.png"
+      />
+    </div>
+  </body>
+</html>
